@@ -22,7 +22,7 @@ const MobileNavbar = () => {
             src="/images/icon-menu.svg"
             alt="menu"
             width={16}
-            height={153}
+            height={16}
             className="cursor-pointer"
           />
         </SheetTrigger>
@@ -43,6 +43,7 @@ const MobileNavbar = () => {
                 href={link.href}
                 key={link.label}
                 onClick={() => setSheetOpen(false)}
+                className="font-bold text-xl mt-4"
               >
                 {link.label}
               </Link>
