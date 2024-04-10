@@ -1,3 +1,4 @@
+import { headerLinks } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -16,11 +17,11 @@ const Navbar = () => {
           />
         </Link>
         <div className="*:mx-4 *:text-blue-dark-grayish">
-          <Link href="/">Collections</Link>
-          <Link href="/">Men</Link>
-          <Link href="/">Women</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
+          {headerLinks.map((link) => (
+            <Link href={link.href} key={link.label}>
+              {link.label}
+            </Link>
+          ))}
         </div>
         <div className="ml-auto flex flex-row items-center">
           <Image
