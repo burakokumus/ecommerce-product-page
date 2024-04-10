@@ -1,11 +1,11 @@
-import React from 'react';
-import Image from 'next/image';
+import Image from "next/image";
 import Link from "next/link";
+import React from "react";
 
 const Navbar = () => {
   return (
     <div className="flex flex-row justify-center">
-      <nav className="hidden md:flex sticky mt-16 w-3/4 border-b-2 pb-8 border-blue-grayish items-center">
+      <nav className="sticky mt-16 hidden w-3/4 items-center border-b-2 border-blue-grayish pb-8 md:flex">
         <Link href="/" className="mr-16">
           <Image
             src="/images/logo.svg"
@@ -22,20 +22,20 @@ const Navbar = () => {
           <Link href="/">About</Link>
           <Link href="/">Contact</Link>
         </div>
-        <div className="flex flex-row items-center ml-auto">
-          <Image 
-          src="/images/icon-cart.svg"
-          alt="Cart"
-          width={25}
-          height={25}
-          className="cursor-pointer mx-8"
+        <div className="ml-auto flex flex-row items-center">
+          <Image
+            src="/images/icon-cart.svg"
+            alt="Cart"
+            width={25}
+            height={25}
+            className="mx-8 cursor-pointer"
           />
-          <Image 
-          src="/images/image-avatar.png"
-          alt="avatar"
-          width={40}
-          height={40}
-          className="cursor-pointer"
+          <Image
+            src="/images/image-avatar.png"
+            alt="avatar"
+            width={40}
+            height={40}
+            className="cursor-pointer"
           />
         </div>
       </nav>

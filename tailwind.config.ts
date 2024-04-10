@@ -59,7 +59,7 @@ const config = {
         blue: {
           "very-dark": "hsl(var(--very-dark-blue))",
           "dark-grayish": "hsl(var(--dark-grayish-blue))",
-          "grayish": "hsl(var(--grayish-blue))",
+          grayish: "hsl(var(--grayish-blue))",
           "light-grayish": "hsl(var(--light-grayish-blue))",
         },
       },
