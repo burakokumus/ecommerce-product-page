@@ -15,7 +15,7 @@ const MobileNavbar = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
 
   return (
-    <div className="md:hidden fixed top-0 flex flex-row pt-8 pl-8 items-center justify-center gap-4">
+    <div className="md:hidden fixed top-0 z-20 flex flex-row w-full pt-4 bg-white px-8 items-center justify-center gap-4">
       <Sheet open={sheetOpen} onOpenChange={setSheetOpen}>
         <SheetTrigger>
           <Image
