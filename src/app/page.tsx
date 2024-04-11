@@ -1,16 +1,20 @@
-import { thumbnails } from "@/lib/utils";
+"use client";
+
+import { thumbnails, productImages } from "@/lib/utils";
 import Image from "next/image";
+import { useState } from "react";
 
 import Counter from "@/components/Counter";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
+  const [selectedImage, setSelectedImage] = useState(productImages[0]);
   return (
     <main className="flex flex-col min-h-screen">
       <div className="flex flex-col items-center justify-between py-6 overflow-hidden md:grid md:grid-cols-2 md:max-w-screen-lg md:mx-auto md:py-16">
         <div className="relative w-full h-[33vh] top-12 overflow-hidden md:hidden">
           <Image
-            src="/images/image-product-1.jpg"
+            src={selectedImage}
             alt="Product image"
             quality={100}
             fill={true}
@@ -19,7 +23,7 @@ export default function Home() {
         </div>
         <div className="hidden md:flex md:flex-col">
           <Image
-            src="/images/image-product-1.jpg"
+            src={selectedImage}
             alt="Product image"
             quality={100}
             width={500}
@@ -27,7 +31,7 @@ export default function Home() {
             className="object-cover rounded-xl"
           />
           <div className="mt-8 flex flex-row justify-around px-4">
-            {thumbnails.map((thumbnail) => (
+            {thumbnails.map((thumbnail, index) => (
               <Image
                 key={thumbnail}
                 src={thumbnail}
@@ -36,6 +40,7 @@ export default function Home() {
                 width={90}
                 height={90}
                 className="rounded-lg cursor-pointer hover:shadow-lg transition-shadow duration-300 ease-in-out"
+                onClick={() => setSelectedImage(productImages[index])}
               />
             ))}
           </div>
