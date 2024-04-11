@@ -13,16 +13,29 @@ export const headerLinks = [
   { href: "/", label: "Contact" },
 ];
 
-export const thumbnails = [
-  "/images/image-product-1-thumbnail.jpg",
-  "/images/image-product-2-thumbnail.jpg",
-  "/images/image-product-3-thumbnail.jpg",
-  "/images/image-product-4-thumbnail.jpg",
-];
-
-export const productImages = [
-  "/images/image-product-1.jpg",
-  "/images/image-product-2.jpg",
-  "/images/image-product-3.jpg",
-  "/images/image-product-4.jpg",
+export const productList = [
+  {
+    id: 1,
+    img: "/images/image-product-1.jpg",
+    thumbnail: "/images/image-product-1-thumbnail.jpg",
+    isActive: true,
+  },
+  {
+    id: 2,
+    img: "/images/image-product-2.jpg",
+    thumbnail: "/images/image-product-2-thumbnail.jpg",
+    isActive: false,
+  },
+  {
+    id: 3,
+    img: "/images/image-product-3.jpg",
+    thumbnail: "/images/image-product-3-thumbnail.jpg",
+    isActive: false,
+  },
+  {
+    id: 4,
+    img: "/images/image-product-4.jpg",
+    thumbnail: "/images/image-product-4-thumbnail.jpg",
+    isActive: false,
+  },
 ];
