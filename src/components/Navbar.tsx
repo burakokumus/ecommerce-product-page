@@ -2,6 +2,7 @@ import { headerLinks } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import Cart from "./Cart";
 
 const Navbar = () => {
   return (
@@ -24,13 +25,7 @@ const Navbar = () => {
           ))}
         </div>
         <div className="ml-auto flex flex-row items-center">
-          <Image
-            src="/images/icon-cart.svg"
-            alt="Cart"
-            width={25}
-            height={25}
-            className="mx-8 cursor-pointer"
-          />
+          <Cart />
           <Image
             src="/images/image-avatar.png"
             alt="avatar"

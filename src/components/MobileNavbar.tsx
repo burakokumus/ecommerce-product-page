@@ -6,6 +6,7 @@ import Link from "next/link";
 import React, { useState } from "react";
 
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import Cart from "@/components/Cart";
 
 const MobileNavbar = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -57,13 +58,7 @@ const MobileNavbar = () => {
         />
       </Link>
       <div className="ml-auto flex flex-row items-center">
-        <Image
-          src="/images/icon-cart.svg"
-          alt="Cart"
-          width={20}
-          height={20}
-          className="ml-12 mr-4 cursor-pointer"
-        />
+        <Cart />
         <Image
           src="/images/image-avatar.png"
           alt="avatar"
