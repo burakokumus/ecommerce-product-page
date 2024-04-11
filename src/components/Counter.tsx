@@ -16,10 +16,10 @@ const Counter = () => {
   }
 
   return (
-    <div className="bg-blue-light-grayish flex flex-row justify-between px-6 rounded-lg h-12 items-center">
-      <p className="font-bold text-orange-primary text-3xl" onClick={minusPressed}>-</p>
+    <div className="bg-blue-light-grayish flex flex-row justify-between px-6 rounded-lg h-12 items-center md:col-span-2">
+      <p className="font-bold text-orange-primary text-3xl cursor-pointer" onClick={minusPressed}>-</p>
       <p className="font-bold">{count}</p>
-      <p className="font-bold text-orange-primary text-3xl" onClick={plusPressed}>+</p>
+      <p className="font-bold text-orange-primary text-3xl cursor-pointer" onClick={plusPressed}>+</p>
     </div>
   );
 };
