@@ -5,11 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const MobileNavbar = () => {
   const [sheetOpen, setSheetOpen] = useState(false);
@@ -28,7 +24,6 @@ const MobileNavbar = () => {
         </SheetTrigger>
         <SheetContent side="left">
           <div className="flex flex-col">
-
             <Link href="/" className="mb-4">
               <Image
                 src="/images/logo.svg"
