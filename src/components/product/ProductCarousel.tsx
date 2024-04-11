@@ -10,9 +10,7 @@ export interface ProductCarouselProps {
 
 const ProductCarousel = ({ onClick }: ProductCarouselProps) => {
   const [selectedImage, setSelectedImage] = useState(productList[0].img);
-  const [currentIndex, setCurrentIndex] = useState(1);
   const [products, setProducts] = useState(productList);
-  const [lightboxVisible, setLightboxVisible] = useState(false);
 
   const handleSelect = (id: number) => {
     const updatedProducts = productList.map((product) => {
@@ -24,7 +22,6 @@ const ProductCarousel = ({ onClick }: ProductCarouselProps) => {
       return { ...product, isActive: false };
     });
 
-    setCurrentIndex(id);
     setProducts(updatedProducts);
   };
 
