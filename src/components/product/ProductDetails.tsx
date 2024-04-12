@@ -1,9 +1,19 @@
+"use client";
+
 import Image from "next/image";
 
 import Counter from "@/components/Counter";
 import { Button } from "@/components/ui/button";
+import { useCart } from "@/context/CartContext";
 
 const ProductDetails = () => {
+  const { cart, addToCart } = useCart();
+
+  const handleClick = () => {
+    addToCart({ title: "asd", img: "asd", quantity: 1, price: 125.00 });
+    console.log(cart);
+  };
+
   return (
     <div className="mt-24 px-8 md:px-16 md:mt-0">
       {" "}
@@ -28,7 +38,10 @@ const ProductDetails = () => {
       </div>
       <div className="flex flex-col md:grid md:grid-cols-5 md:items-end gap-2">
         <Counter />
-        <Button className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary">
+        <Button
+          className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary"
+          onClick={handleClick}
+        >
           <Image
             src="/images/icon-cart-white.svg"
             alt="cart-icon"

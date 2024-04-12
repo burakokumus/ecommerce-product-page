@@ -4,6 +4,7 @@ import { Kumbh_Sans } from "next/font/google";
 
 import MobileNavbar from "@/components/MobileNavbar";
 import Navbar from "@/components/Navbar";
+import { CartContextProvider } from "@/context/CartContext";
 
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 
@@ -20,9 +21,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={kumbhSans.className}>
-        <MobileNavbar />
-        <Navbar />
-        {children}
+        <CartContextProvider>
+          <MobileNavbar />
+          <Navbar />
+          {children}
+        </CartContextProvider>
       </body>
     </html>
   );
