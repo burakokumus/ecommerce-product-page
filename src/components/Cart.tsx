@@ -1,29 +1,39 @@
 "use client";
 
 import { Button } from "./ui/button";
-import React, { useState } from "react";
 import Image from "next/image";
+import React, { useState } from "react";
 
 const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className={isOpen ? "bg-orange-300" : ""}>
-      <Button
-        onClick={() => {
-          setIsOpen((prev) => !prev);
-          console.log(isOpen);
-        }}
-      className={"hover:bg-transparent bg-transparent"}
-      >
-        <Image
-          src={"/images/icon-cart.svg"}
-          width={22}
-          height={20}
-          alt="cart"
-        />
-        <span className="sr-only">Cart</span></Button>
-    </div>
+    <>
+      <div className="relative">
+        <Button
+          onClick={() => {
+            setIsOpen((prev) => !prev);
+            console.log(isOpen);
+          }}
+          className={"hover:bg-transparent bg-transparent"}
+        >
+          <Image
+            src={"/images/icon-cart.svg"}
+            width={22}
+            height={20}
+            alt="cart"
+          />
+          <span className="sr-only">Cart</span>
+        </Button>
+      </div>
+      {isOpen && (
+        <div className="grid absolute z-[9999] left-0 right-0 m-3 top-20 bg-white shadow-2xl rounded-md md:max-w-sm md:right-0 md:left-auto md:top-12 border-2 border-blue-light-grayish">
+          <p className="w-[328px] h-[250px] grid place-items-center text-darkGrayishBlue font-bold">
+            Your Cart is empty
+          </p>
+        </div>
+      )}
+    </>
   );
 };
 

@@ -5,8 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Cart from "@/components/Cart";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const MobileNavbar = () => {
   const [sheetOpen, setSheetOpen] = useState(false);

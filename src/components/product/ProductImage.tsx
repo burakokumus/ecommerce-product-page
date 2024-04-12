@@ -47,7 +47,7 @@ const MobileCarousel = () => {
         className="object-cover"
       />
       <Button
-        className="absolute z-50 top-[17vh] bg-white hover:bg-blue-light-grayish w-10 aspect-square left-3 grid place-items-center rounded-full"
+        className="absolute z-15 top-[17vh] bg-white hover:bg-blue-light-grayish w-10 aspect-square left-3 grid place-items-center rounded-full"
         onClick={() => {
           console.log("Back");
           if (currentIndex > 1) {
@@ -65,7 +65,7 @@ const MobileCarousel = () => {
         <span className="sr-only">back button</span>
       </Button>
       <Button
-        className="absolute z-50 top-[17vh] bg-white hover:bg-blue-light-grayish w-10 aspect-square right-3 grid place-items-center rounded-full"
+        className="absolute z-15 top-[17vh] bg-white hover:bg-blue-light-grayish w-10 aspect-square right-3 grid place-items-center rounded-full"
         onClick={() => {
           console.log("Forward");
           if (currentIndex < productList.length) {
