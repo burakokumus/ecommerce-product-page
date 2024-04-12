@@ -54,6 +54,7 @@ const config = {
         },
         orange: {
           primary: "hsl(var(--primary-orange))",
+          secondary: "hsl(var(--secondary-orange))",
           pale: "hsl(var(--pale-orange))",
         },
         blue: {
