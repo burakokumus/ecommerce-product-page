@@ -15,7 +15,12 @@ const Cart = () => {
 
   const getTotalQuantity = () => {
     return cart.reduce((n, { quantity }) => n + quantity, 0);
-  }
+  };
+
+  const onCheckoutClick = () => {
+    clearCart();
+    setIsOpen(false);
+  };
 
   return (
     <>
@@ -52,7 +57,10 @@ const Cart = () => {
               {cart.map((item) => (
                 <CartItemRow key={item.title} onDelete={clearCart} {...item} />
               ))}
-              <Button className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary">
+              <Button
+                className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary"
+                onClick={onCheckoutClick}
+              >
                 Checkout
               </Button>
             </div>
