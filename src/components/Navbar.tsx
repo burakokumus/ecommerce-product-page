@@ -19,7 +19,10 @@ const Navbar = () => {
         </Link>
         <div className="*:mx-4 *:text-blue-dark-grayish">
           {headerLinks.map((link) => (
-            <Link href={link.href} key={link.label}>
+            <Link
+              href={link.href}
+              key={link.label}
+              className="hover:border-b-4 hover:border-orange-primary hover:pb-8">
               {link.label}
             </Link>
           ))}
