@@ -6,9 +6,10 @@ import React, { useState } from "react";
 
 export interface ProductCarouselProps {
   onClick?: () => void;
+  arrowsVisible?: boolean;
 }
 
-const ProductCarousel = ({ onClick }: ProductCarouselProps) => {
+const ProductCarousel = ({ onClick, arrowsVisible = false }: ProductCarouselProps) => {
   const [selectedImage, setSelectedImage] = useState(productList[0].img);
   const [products, setProducts] = useState(productList);
 

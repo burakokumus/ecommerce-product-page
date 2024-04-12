@@ -7,7 +7,7 @@ export interface LightboxProps {
 
 const Lightbox = ({ children, handleClose }: LightboxProps) => {
   return (
-    <div className="fixed overflow-hidden inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75">
+    <div className="fixed z-10 overflow-hidden inset-0 flex flex-col items-center justify-center bg-black bg-opacity-75">
       <div className="flex flex-col items-end">
         <button onClick={handleClose} className="mb-4">
           <svg width="14" height="15" xmlns="http://www.w3.org/2000/svg">

@@ -17,7 +17,7 @@ const ProductImage = () => {
       <ProductCarousel onClick={() => setLightboxVisible(true)} />
       {lightboxVisible && (
         <Lightbox handleClose={() => setLightboxVisible(false)}>
-          <ProductCarousel />
+          <ProductCarousel arrowsVisible />
         </Lightbox>
       )}
     </>
