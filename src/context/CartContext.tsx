@@ -2,7 +2,7 @@
 
 import { ReactNode, createContext, useContext, useState } from "react";
 
-interface CartItem {
+export interface CartItem {
   title: string;
   img: string;
   price: number;
@@ -27,6 +27,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (item: CartItem) => {
+    if (item.quantity <= 0) return;
     setCart((prev) => {
       const itemIndex = prev.findIndex((i) => i.title === item.title);
 

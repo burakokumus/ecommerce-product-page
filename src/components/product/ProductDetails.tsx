@@ -1,22 +1,8 @@
-"use client";
-
-import Image from "next/image";
-
-import { useCart } from "@/context/CartContext";
-
-import Counter from "@/components/Counter";
-import { Button } from "@/components/ui/button";
+import AddToCart from "../AddToCart";
 
 const ProductDetails = () => {
-  const { cart, addToCart } = useCart();
-
-  const handleClick = () => {
-    addToCart({ title: "asd", img: "asd", quantity: 1, price: 125.0 });
-  };
-
   return (
     <div className="mt-24 px-8 md:px-16 md:mt-0">
-      {" "}
       {/* Product Details */}
       <p className="text-orange-primary font-semibold uppercase text-xs tracking-widest mb-4">
         Sneaker Company
@@ -36,21 +22,11 @@ const ProductDetails = () => {
           $250.00
         </p>
       </div>
-      <div className="flex flex-col md:grid md:grid-cols-5 md:items-end gap-2">
-        <Counter />
-        <Button
-          className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary"
-          onClick={handleClick}
-        >
-          <Image
-            src="/images/icon-cart-white.svg"
-            alt="cart-icon"
-            width={20}
-            height={20}
-          />
-          <p>Add to cart</p>
-        </Button>
-      </div>
+      <AddToCart
+        title="Fall Limited Edition Sneakers"
+        img="/images/image-product-1.jpg"
+        price={125}
+      />
     </div>
   );
 };
