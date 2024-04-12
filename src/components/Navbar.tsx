@@ -1,4 +1,4 @@
-import Cart from "./Cart";
+import Cart from "./cart/Cart";
 import { headerLinks } from "@/lib/utils";
 import Image from "next/image";
 import Link from "next/link";

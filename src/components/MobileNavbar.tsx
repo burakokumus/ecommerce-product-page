@@ -5,7 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
 
-import Cart from "@/components/Cart";
+import Cart from "@/components/cart/Cart";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const MobileNavbar = () => {

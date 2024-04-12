@@ -24,7 +24,7 @@ const ProductDetails = () => {
       </div>
       <AddToCart
         title="Fall Limited Edition Sneakers"
-        img="/images/image-product-1.jpg"
+        img="/images/image-product-1-thumbnail.jpg"
         price={125}
       />
     </div>
