@@ -13,9 +13,18 @@ const Cart = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { cart, clearCart } = useCart();
 
+  const getTotalQuantity = () => {
+    return cart.reduce((n, { quantity }) => n + quantity, 0);
+  }
+
   return (
     <>
       <div className="relative">
+        {cart.length > 0 && (
+          <p className="absolute top-1 right-1 bg-orange-primary text-white px-2 rounded-full text-xs">
+            {getTotalQuantity()}
+          </p>
+        )}
         <Button
           onClick={() => {
             setIsOpen((prev) => !prev);

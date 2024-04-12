@@ -28,6 +28,7 @@ const AddToCart = ({ title, img, price }: AddToCartProps) => {
 
   const handleClick = () => {
     addToCart({ title, img, quantity, price });
+    setQuantity(0);
   };
   return (
     <div className="flex flex-col md:grid md:grid-cols-5 md:items-end gap-2">
@@ -51,6 +52,7 @@ const AddToCart = ({ title, img, price }: AddToCartProps) => {
       <Button
         className="w-full mt-4 h-12 bg-orange-primary rounded-lg color-white font-semibold text-lg gap-4  md:col-span-3 hover:bg-orange-secondary"
         onClick={handleClick}
+        disabled={quantity === 0}
       >
         <Image
           src="/images/icon-cart-white.svg"
