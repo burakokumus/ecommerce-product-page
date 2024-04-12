@@ -2,9 +2,10 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Kumbh_Sans } from "next/font/google";
 
+import { CartContextProvider } from "@/context/CartContext";
+
 import MobileNavbar from "@/components/MobileNavbar";
 import Navbar from "@/components/Navbar";
-import { CartContextProvider } from "@/context/CartContext";
 
 const kumbhSans = Kumbh_Sans({ subsets: ["latin"] });
 

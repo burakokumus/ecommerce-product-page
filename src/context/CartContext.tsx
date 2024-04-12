@@ -27,17 +27,22 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   const [cart, setCart] = useState<CartItem[]>([]);
 
   const addToCart = (item: CartItem) => {
-    console.log("addToCart");
     setCart((prev) => {
       const itemIndex = prev.findIndex((i) => i.title === item.title);
 
       if (itemIndex === -1) {
-        console.log("item not found");
         return [...prev, item];
       }
 
-      const updatedCart = [...prev];
-      updatedCart[itemIndex].quantity += item.quantity;
+      const updatedCart = prev.map((cartItem, index) => {
+        if (index === itemIndex) {
+          return {
+            ...cartItem,
+            quantity: cartItem.quantity + item.quantity,
+          };
+        }
+        return cartItem;
+      });
 
       return updatedCart;
     });

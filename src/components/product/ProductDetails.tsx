@@ -2,16 +2,16 @@
 
 import Image from "next/image";
 
+import { useCart } from "@/context/CartContext";
+
 import Counter from "@/components/Counter";
 import { Button } from "@/components/ui/button";
-import { useCart } from "@/context/CartContext";
 
 const ProductDetails = () => {
   const { cart, addToCart } = useCart();
 
   const handleClick = () => {
-    addToCart({ title: "asd", img: "asd", quantity: 1, price: 125.00 });
-    console.log(cart);
+    addToCart({ title: "asd", img: "asd", quantity: 1, price: 125.0 });
   };
 
   return (
